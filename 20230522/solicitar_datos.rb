@@ -1,5 +1,6 @@
 # solicitar al usuario ingresar la cantidad de veces a solictar la información
 # nombre, apellido y edad
+cantidad = 0
 puts "Ingrese la cantidad de veces que desea solicitar información:"
 cantidad = gets.chomp.to_i
 
@@ -34,21 +35,22 @@ contador = 0
 #     puts "Ingrese su edad:"
 #     edad = gets.chomp.to_i
 
-#     contador += 1
 # end
 
 
 cantidad.times do |i|
     puts "Ingrese su nombre"
-    nombre = gets.chomp
+    nombre = gets.chomp.to_s
 
     puts "Ingrese su apellido"
-    apellido = gets.chomp
+    apellido = gets.chomp.to_s
 
     puts "Ingrese su edad:"
     edad = gets.chomp.to_i
 
-    puts "#{nombre} #{apellido} #{edad} años"
+    puts "cliente nombre:#{nombre} #{apellido} de edad: #{edad} años"
+
+    break if cantidad >4
 end
 
 
